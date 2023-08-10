@@ -12,6 +12,7 @@ import RecipeDetails from './components/RecipeDetails';
 import TravelDetails from './components/TravelDetails';
 import TechDetails from './components/TechDetails';
 import LifestyleDetails from './components/LifestyleDetails';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 function App() {
   return (
