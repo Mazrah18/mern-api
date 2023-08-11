@@ -38,7 +38,7 @@ const Create = () => {
   return (
     <div className="create">
       <h2>Add a New Blog</h2>
-      <form onSubmit={handleSubmit}>
+      <form style={{ maxWidth : '400px' , textAlign : 'center' , margin : '0 auto'}} onSubmit={handleSubmit}>
         <label>Blog title:</label>
         <input 
           type="text" 
@@ -51,6 +51,7 @@ const Create = () => {
           required
           value={body}
           onChange={(e) => setBody(e.target.value)}
+          style={ {height : '400px'}}
         ></textarea>
        <label>Blog author:</label>
         <textarea
@@ -68,6 +69,10 @@ const Create = () => {
         </select>
         <button>Add Blog</button>
       </form>
+      <div className="create1">
+
+      </div>
+      
     </div>
   );
 }

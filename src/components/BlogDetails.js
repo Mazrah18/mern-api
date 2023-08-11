@@ -23,19 +23,38 @@ const BlogDetails = () => {
   };
 
   return (
+
     <div className="blog-details">
-      { isPending && <div>Loading...</div> }
-      { error && <div>{ error }</div> }
-      { blog && (
-        <article>
-          <h2>{ blog.title }</h2>
-          <p>Written by { blog.author }</p>
-          <div>{ blog.body }</div>
-          <button onClick={handleDelete}>Delete</button>
+    <div className="blog-content">
+      {isPending && <div className="loading">Loading...</div>}
+      {error && <div className="error">{error}</div>}
+      {blog && (
+        <article className="blog-article">
+          <h1 className="blog-title">{blog.title}</h1>
+          <p className="blog-author">Written by {blog.author}</p>
+          <div className="blog-body" style={{ whiteSpace: 'pre-line' }}>{blog.body}</div>
         </article>
       )}
+      {blog && (
+        <button className="delete-button" onClick={handleDelete}>
+          Delete
+        </button>
+      )}
     </div>
+  </div>
+    
   );
 }
  
 export default BlogDetails;
+
+
+// import React from 'react';
+
+// const BlogDetails = ({ blog, isPending, error, handleDelete }) => {
+//   return (
+   
+//   );
+// }
+
+// export default BlogDetails;
